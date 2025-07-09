@@ -1,0 +1,24 @@
+{
+  "name": "next-auth-get-token",
+  "version": "1.0.0",
+  "description": "Chrome extension for get auth token when next.js apps witch Next-Auth",
+  "main": "scr/popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blmarquess/next-auth-get-token.git"
+  },
+  "keywords": [
+    "nextjs",
+    "next-auth",
+    "get-token"
+  ],
+  "author": "Bruno Marques <blmarques.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blmarquess/next-auth-get-token/issues"
+  },
+  "homepage": "https://github.com/blmarquess/next-auth-get-token#readme"
+}

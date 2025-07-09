@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "NextAuth GetToken",
+  "version": "1.0",
+  "description": "Esta é uma automação para obter o token de autenticação do NextAuth.",
+  "permissions": ["webRequest", "scripting", "clipboardWrite", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
