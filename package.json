@@ -1,11 +1,8 @@
 {
   "name": "next-auth-get-token",
   "version": "1.0.0",
-  "description": "Chrome extension for get auth token when next.js apps witch Next-Auth",
+  "description": "Uma extensão do Chrome para copiar o accessToken de uma requisição 'session' do Next-Auth.",
   "main": "scr/popup.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/blmarquess/next-auth-get-token.git"
@@ -20,5 +17,17 @@
   "bugs": {
     "url": "https://github.com/blmarquess/next-auth-get-token/issues"
   },
-  "homepage": "https://github.com/blmarquess/next-auth-get-token#readme"
+  "homepage": "https://github.com/blmarquess/next-auth-get-token#readme",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:ts": "esbuild src/background.ts src/popup.ts --bundle --outdir=dist --platform=browser",
+    "copy:static": "cp src/popup.html manifest.json dist/",
+    "build": "npm run clean && npm run build:ts && npm run copy:static"
+  },
+  "dependencies": { },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "esbuild": "^0.25.6",
+    "typescript": "^5.4.5"
+  }
 }

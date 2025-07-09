@@ -4,9 +4,16 @@
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "outDir": "dist",
+    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "Node"
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "types": ["chrome"],
+    "noEmit": true
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts", "public"],
+  "exclude": ["node_modules", "dist"]
 }
